@@ -17,18 +17,18 @@ export default function App() {
       <Tab.Navigator
         screenOptions={{
           tabBarShowLabel: false,
-          tabBarActiveTintColor: 'red',
+          tabBarActiveTintColor: '#0c8079',
         }}>
         <Tab.Screen
           name='All'
           component={All}
           options={{
             headerShown: false,
-
-            tabBarIcon: () => (
+            tabBarIcon: (props) => (
               <Icon
                 name='home'
                 type='feather'
+                color={props.color}
               />
             ),
           }}
@@ -38,10 +38,11 @@ export default function App() {
           component={Business}
           options={{
             headerShown: false,
-            tabBarIcon: () => (
+            tabBarIcon: (props) => (
               <Icon
                 name='pie-chart'
                 type='feather'
+                color={props.color}
               />
             ),
           }}
@@ -51,10 +52,11 @@ export default function App() {
           component={Sports}
           options={{
             headerShown: false,
-            tabBarIcon: () => (
+            tabBarIcon: (props) => (
               <Icon
                 name='tennisball-outline'
                 type='ionicon'
+                color={props.color}
               />
             ),
           }}
@@ -64,10 +66,11 @@ export default function App() {
           component={Health}
           options={{
             headerShown: false,
-            tabBarIcon: () => (
+            tabBarIcon: (props) => (
               <Icon
                 name='activity'
                 type='feather'
+                color={props.color}
               />
             ),
           }}
@@ -77,16 +80,17 @@ export default function App() {
           component={Tech}
           options={{
             headerShown: false,
-            tabBarIcon: () => (
+            tabBarIcon: (props) => (
               <Icon
                 name='hardware-chip-outline'
                 type='ionicon'
+                color={props.color}
               />
             ),
           }}
         />
       </Tab.Navigator>
-      <StatusBar style='auto' />
+      <StatusBar style='default' />
     </NavigationContainer>
   );
 }
