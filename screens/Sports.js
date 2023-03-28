@@ -1,13 +1,57 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import { NativeBaseProvider, Divider } from 'native-base';
 
 function Sports() {
   return (
-    <View>
-      <View style={styles.container}>
-        <Text style={styles.text}>Sports</Text>
+    <NativeBaseProvider>
+      <View>
+        <View style={styles.container}>
+          <Text style={styles.text}>Sports</Text>
+        </View>
+        <View>
+          <View>
+            <View style={styles.flex}>
+              <Text style={[styles.title, styles.fontsize]}>Title</Text>
+              <Text style={[styles.date, styles.fontsize]}>Date</Text>
+            </View>
+            <View style={styles.description}>
+              <Text style={[styles.title, styles.fontsize]}>Description</Text>
+            </View>
+          </View>
+          <Divider
+            my={2}
+            bg='#bdbdbd'
+          />
+          <View>
+            <View style={styles.flex}>
+              <Text style={[styles.title, styles.fontsize]}>Title</Text>
+              <Text style={[styles.date, styles.fontsize]}>Date</Text>
+            </View>
+            <View style={styles.description}>
+              <Text style={[styles.title, styles.fontsize]}>Description</Text>
+            </View>
+          </View>
+          <Divider
+            my={2}
+            bg='#bdbdbd'
+          />
+          <View>
+            <View style={styles.flex}>
+              <Text style={[styles.title, styles.fontsize]}>Title</Text>
+              <Text style={[styles.date, styles.fontsize]}>Date</Text>
+            </View>
+            <View style={styles.description}>
+              <Text style={[styles.title, styles.fontsize]}>Description</Text>
+            </View>
+          </View>
+          <Divider
+            my={2}
+            bg='#bdbdbd'
+          />
+        </View>
       </View>
-    </View>
+    </NativeBaseProvider>
   );
 }
 
@@ -24,6 +68,18 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 24,
     fontFamily: 'Roboto',
+  },
+  flex: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 20,
+  },
+  fontsize: {
+    fontSize: 20,
+  },
+  description: {
+    padding: 20,
   },
 });
 
