@@ -17,10 +17,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 30,
     padding: 10,
-    backgroundColor: '#B99B6B',
+    backgroundColor: '#E1EEDD',
+    borderBottomWidth: 2,
+    borderBottomColor: '#bdbdbd',
   },
   text: {
     fontSize: 24,
+    fontFamily: 'Roboto',
   },
 });
 

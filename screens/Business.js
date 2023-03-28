@@ -18,9 +18,12 @@ const styles = StyleSheet.create({
     marginTop: 30,
     padding: 10,
     backgroundColor: '#B99B6B',
+    borderBottomWidth: 2,
+    borderBottomColor: '#bdbdbd',
   },
   text: {
     fontSize: 24,
+    fontFamily: 'Roboto',
   },
 });
 
