@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { NativeBaseProvider, Divider } from 'native-base';
+import { services } from '../service/services';
 
 function All() {
+  const [newsData, setNewsData] = useState([]);
+  useEffect(() => {
+    services('general')
+      .then((data) => {
+        setNewsData(data);
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }, []);
+
   return (
     <NativeBaseProvider>
       <View>
